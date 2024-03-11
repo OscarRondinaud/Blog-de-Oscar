@@ -4,27 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Work+Sans&display=swap');
 
-    #header {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+* {
+    font-family: 'Roboto', sans-serif;
+}
 
-    #board {
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#board {
       display: grid;
       grid-template-columns: repeat(3, 100px);
       grid-gap: 5px;
     }
 
-    .cell {
+.cell {
       width: 100px;
       height: 100px;
       font-size: 24px;
@@ -33,17 +49,19 @@
       background-color: #f0f0f0;
     }
 
-    .cell:hover {
+.cell:hover {
       background-color: #ddd;
     }
 
-    #reset-button {
+#reset-button {
       margin-top: 20px;
       padding: 10px;
       font-size: 16px;
       cursor: pointer;
+      color: blue;
     }
-    header {
+
+header {
     color: black;
     padding: 10px 0;
     text-align: center;
@@ -51,6 +69,10 @@
     padding-top: 50px;
 }
 
+#center {
+display: flex;
+justify-content: center;
+}
 
   </style>
   <title>Morpion</title>
@@ -62,12 +84,15 @@
             <a href="AppNous.html">À propos de nous</a>
             <a href="List-art.html">Liste d'articles</a>
             <a href="Login.html">Login</a>
+            <a href="cv.html">CV</a>
             <a href="Morpion.html">Morpion</a>
         </nav>
     
   <h1>Morpion</h1>
 <div id="header">Tour de Joueur 1 (X)</div>
+<div id="center">
 <div id="board"></div>
+</div>
 <button id="reset-button" onclick="resetGame()">Réinitialiser le Jeu</button>
 
 <script>
